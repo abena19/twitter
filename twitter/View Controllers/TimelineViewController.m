@@ -22,8 +22,9 @@
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
-            for (NSDictionary *dictionary in tweets) {
-                NSString *text = dictionary[@"text"];
+            // reading in array of tweets onto console
+            for (NSDictionary *tweetDictionary in tweets) {
+                NSString *text = tweetDictionary[@"text"];
                 NSLog(@"%@", text);
             }
         } else {
