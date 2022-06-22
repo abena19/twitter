@@ -13,8 +13,9 @@
 #import "TweetCell.h"
 #import "Tweet.h"
 #import "UIImageView+AFNetworking.h"
+#import "ComposeViewController.h"
 
-@interface TimelineViewController () <UITableViewDataSource>
+@interface TimelineViewController () <UITableViewDataSource, ComposeViewControllerDelegate>
 - (IBAction)didTapLogout:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
 
@@ -50,6 +51,7 @@
     return self.arrayOfTweets.count;
 }
 
+
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
@@ -63,10 +65,10 @@
     }];
 }
 
-// cell Foreach tweet
+// cell For each tweet
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellReuseId"];
-    //  this is of a dictionary type
+
     Tweet *tweets = self.arrayOfTweets[indexPath.row];
     
     NSString *URLString = tweets.user.userProfilePicture;
@@ -90,15 +92,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+ UINavigationController *navigationController = [segue destinationViewController];
+     ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+     composeController.delegate = self;
 }
-*/
+
+
 
 
 - (IBAction)didTapLogout:(id)sender {
@@ -112,4 +116,12 @@
     //  clear access tokens
     [[APIManager shared] logout];
 }
+
+
+
+- (void)didTweet:(nonnull Tweet *)tweet {
+    [self.arrayOfTweets insertObject:tweet atIndex:0];
+    [self.timelineTableView reloadData];
+}
+
 @end
