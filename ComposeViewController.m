@@ -20,12 +20,12 @@
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
+
 - (IBAction)tweetButtonTapped:(id)sender {
     [[APIManager shared] postStatusWithText:self.composeTextView.text completion:^(Tweet *tweet, NSError *error) {
         if(error){
             NSLog(@"Error composing Tweet: %@", error.localizedDescription);
-        }
-        else{
+        } else{
             [self.delegate didTweet:tweet];
             [self dismissViewControllerAnimated:true completion:nil];
             NSLog(@"Compose Tweet Success!");
@@ -37,14 +37,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.composeTextView.delegate = self;
-    // Do any additional setup after loading the view.
-    
-    
-    // Compose tweet
-    // Press tweet button
-        // Post tweet API
-        // Navigate back to the other VC
-    // New data in other VC (passing back the data)
 }
 
 /*

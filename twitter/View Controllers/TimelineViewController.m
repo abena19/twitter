@@ -53,6 +53,7 @@
 
 
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
+    // get timeline for refresh status
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
@@ -65,11 +66,11 @@
     }];
 }
 
-// cell For each tweet
+// cell for each tweet
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCellReuseId"];
-
     Tweet *tweets = self.arrayOfTweets[indexPath.row];
+    cell.tweet = tweets;
     
     NSString *URLString = tweets.user.userProfilePicture;
     NSURL *url = [NSURL URLWithString:URLString];
@@ -89,7 +90,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -100,24 +100,22 @@
  UINavigationController *navigationController = [segue destinationViewController];
      ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
      composeController.delegate = self;
+    
 }
-
-
 
 
 - (IBAction)didTapLogout:(id)sender {
     // access app delegate
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
     // switch content to LoginViewController
     appDelegate.window.rootViewController = loginViewController;
+    
     //  clear access tokens
     [[APIManager shared] logout];
 }
-
-
 
 - (void)didTweet:(nonnull Tweet *)tweet {
     [self.arrayOfTweets insertObject:tweet atIndex:0];

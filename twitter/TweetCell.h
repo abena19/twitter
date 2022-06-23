@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TweetCell : UITableViewCell
+
+
 @property (weak, nonatomic) IBOutlet UILabel *tweetUserScreenName;
 @property (weak, nonatomic) IBOutlet UILabel *tweetCreatedAt;
 @property (weak, nonatomic) IBOutlet UIImageView *tweetProfilePicture;
@@ -22,7 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *messageIcon;
 @property (weak, nonatomic) IBOutlet UILabel *tweetRetweetedCount;
 @property (weak, nonatomic) IBOutlet UILabel *tweetFavCount;
-@property (nonatomic, strong) NSDictionary *tweet;
+@property (nonatomic, strong) Tweet *tweet;
+
+@property (weak, nonatomic) IBOutlet UIButton *didTapFavorite;
+
+@property (weak, nonatomic) IBOutlet UIButton *didTapRetweet;
 
 
 @end

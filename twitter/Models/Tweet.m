@@ -35,7 +35,12 @@
             tweetDictionary = originalTweet;
         }
         self.idStr = tweetDictionary[@"id_str"];
-        self.text = tweetDictionary[@"text"];
+        if([tweetDictionary valueForKey:@"full_text"] != nil) {
+               self.text = tweetDictionary[@"full_text"]; // uses full text if Twitter API provided it
+           } else {
+               self.text = tweetDictionary[@"text"]; // fallback to regular text that Twitter API provided
+           }        
+        
         self.favoriteCount = [tweetDictionary[@"favorite_count"] intValue];
         self.favorited = [tweetDictionary[@"favorited"] boolValue];
         self.retweetCount = [tweetDictionary[@"retweet_count"] intValue];
