@@ -36,7 +36,7 @@
             tweetDictionary = originalTweet;
         }
         self.idStr = tweetDictionary[@"id_str"];
-        if([tweetDictionary valueForKey:@"full_text"] != nil) {
+        if ([tweetDictionary valueForKey:@"full_text"] != nil) {
                self.text = tweetDictionary[@"full_text"]; // uses full text if Twitter API provided it
            } else {
                self.text = tweetDictionary[@"text"]; // fallback to regular text that Twitter API provided

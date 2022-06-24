@@ -41,6 +41,7 @@
     self.tweetText.text = self.tweet.text;
     self.tweetRetweetedCount.text = [NSString stringWithFormat:@"%i", self.tweet.retweetCount];
     self.tweetFavCount.text = [NSString stringWithFormat:@"%i", self.tweet.favoriteCount];
+    self.tweetCreatedAt.text = self.tweet.createdAtString;
 }
 
 - (IBAction)didTapFavoriteButton:(id)sender {
