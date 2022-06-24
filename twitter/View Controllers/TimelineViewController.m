@@ -19,6 +19,7 @@
 @interface TimelineViewController () <UITableViewDataSource, ComposeViewControllerDelegate>
 - (IBAction)didTapLogout:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *timelineTableView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -27,23 +28,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.timelineTableView.dataSource = self;
-    
+    [self.timelineTableView reloadData];
+
     // initialising refresh control
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
-    [self.timelineTableView insertSubview:refreshControl atIndex:0];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.timelineTableView insertSubview:self.refreshControl atIndex:0];
     self.timelineTableView.rowHeight = UITableViewAutomaticDimension;
     
+    
     // Get timeline
-    [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
+   [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
             self.arrayOfTweets = [NSMutableArray arrayWithArray:(NSArray*)tweets];
-            [self.timelineTableView reloadData];
+           // [self.timelineTableView reloadData];
+           // [self.refreshControl endRefreshing];
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
         }
+        [self.timelineTableView reloadData];
+        [self.refreshControl endRefreshing];
+
     }];
+    
 }
 
 
@@ -83,7 +91,7 @@
     cell.tweetCreatedAt.text = tweets.createdAtString;
     cell.tweetRetweetedCount.text = [NSString stringWithFormat:@"%i", tweets.retweetCount];
     cell.tweetFavCount.text = [NSString stringWithFormat:@"%i", tweets.favoriteCount];
-    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     NSLog(@"%@", self.arrayOfTweets);
     return cell;
 }

@@ -200,10 +200,9 @@
                                                     </constraints>
                                                 </stackView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-tt-0T8">
-                                                    <rect key="frame" x="76" y="34" width="310" height="49.5"/>
+                                                    <rect key="frame" x="76" y="34" width="326" height="49.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="310" id="EE2-vo-KMt"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="aRG-Sz-QQ2"/>
                                                     </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -218,6 +217,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F84-Hc-psr" secondAttribute="trailing" constant="8" id="D3k-Qv-bxR"/>
                                                 <constraint firstItem="AT8-uH-EL1" firstAttribute="top" secondItem="LBn-cU-S8N" secondAttribute="top" constant="8" id="HC2-Jc-ljb"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AT8-uH-EL1" secondAttribute="bottom" constant="70" id="RLL-2s-8vZ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HDf-tt-0T8" secondAttribute="trailing" constant="8" id="Sha-Gn-nuy"/>
                                                 <constraint firstItem="F84-Hc-psr" firstAttribute="leading" secondItem="AT8-uH-EL1" secondAttribute="trailing" constant="8" id="TuD-Sh-6pc"/>
                                                 <constraint firstItem="F84-Hc-psr" firstAttribute="top" secondItem="LBn-cU-S8N" secondAttribute="top" constant="8" id="Uy3-Vd-9BH"/>
                                                 <constraint firstItem="AT8-uH-EL1" firstAttribute="leading" secondItem="LBn-cU-S8N" secondAttribute="leading" constant="8" id="WvY-Vj-Jtf"/>

@@ -52,14 +52,13 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/mgibbNz.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://i.imgur.com/mgibbNz.gif
 
 GIF created with [Kap](https://getkap.co/).
 
 Here's a walkthrough of hyperlink feature:
 
-<img src='https://i.imgur.com/OG2raT0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+https://i.imgur.com/OG2raT0.gif
 
 ## Notes
 
