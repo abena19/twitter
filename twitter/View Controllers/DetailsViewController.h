@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
+#import "Tweet.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsViewController : UIViewController
+@property (strong, nonatomic) Tweet *tweet;
 
 @end
 
