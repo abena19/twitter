@@ -123,18 +123,6 @@
                                                         <constraint firstAttribute="width" constant="60" id="zie-Sx-uNt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-tt-0T8">
-                                                    <rect key="frame" x="76" y="34" width="310" height="49.5"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="310" id="EE2-vo-KMt"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="aRG-Sz-QQ2"/>
-                                                    </constraints>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                                </textView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-Ay-H2b">
                                                     <rect key="frame" x="76" y="151" width="308" height="25"/>
                                                     <subviews>
@@ -211,6 +199,18 @@
                                                         <constraint firstAttribute="width" constant="269.5" id="dCe-mH-hNc"/>
                                                     </constraints>
                                                 </stackView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-tt-0T8">
+                                                    <rect key="frame" x="76" y="34" width="310" height="49.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="310" id="EE2-vo-KMt"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="aRG-Sz-QQ2"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="HDf-tt-0T8" firstAttribute="top" secondItem="F84-Hc-psr" secondAttribute="bottom" constant="8" id="1ou-Tj-J77"/>

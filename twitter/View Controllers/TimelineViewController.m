@@ -43,7 +43,6 @@
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
         }
-        [self.timelineTableView reloadData];
     }];
 }
 

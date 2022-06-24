@@ -56,6 +56,11 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [Kap](https://getkap.co/).
 
+Here's a walkthrough of hyperlink feature:
+
+<img src='https://i.imgur.com/OG2raT0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 ## Notes
 
 Describe any challenges encountered while building the app.
