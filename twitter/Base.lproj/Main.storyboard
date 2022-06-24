@@ -309,21 +309,21 @@
         <scene sceneID="pXz-yk-0vp">
             <objects>
                 <viewController id="izb-SD-ZRK" customClass="ComposeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ckh-OX-E3L">
+                    <view key="view" contentMode="scaleToFill" id="ckh-OX-E3L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvm-Ay-cRd">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvm-Ay-cRd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WYj-jd-xKF">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WYj-jd-xKF">
                                         <rect key="frame" x="8" y="30" width="398" height="782"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="285" id="Ggk-9d-Md3"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="Oab-DS-kDr"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -331,20 +331,20 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="WYj-jd-xKF" firstAttribute="top" secondItem="hvm-Ay-cRd" secondAttribute="top" constant="30" id="5Hl-WF-CHj"/>
-                                    <constraint firstItem="WYj-jd-xKF" firstAttribute="leading" secondItem="hvm-Ay-cRd" secondAttribute="leading" constant="8" id="dui-4m-vUQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="WYj-jd-xKF" secondAttribute="trailing" constant="30" id="fqa-Kv-JPG"/>
-                                    <constraint firstAttribute="bottom" secondItem="WYj-jd-xKF" secondAttribute="bottom" constant="30" id="y8q-Pp-w6c"/>
+                                    <constraint firstItem="WYj-jd-xKF" firstAttribute="leading" secondItem="hvm-Ay-cRd" secondAttribute="leadingMargin" id="2bE-SZ-Vqf"/>
+                                    <constraint firstItem="WYj-jd-xKF" firstAttribute="centerY" secondItem="hvm-Ay-cRd" secondAttribute="centerY" id="6Ja-du-UvO"/>
+                                    <constraint firstItem="WYj-jd-xKF" firstAttribute="top" secondItem="hvm-Ay-cRd" secondAttribute="top" constant="30" id="LH8-7I-zbd"/>
+                                    <constraint firstItem="WYj-jd-xKF" firstAttribute="trailing" secondItem="hvm-Ay-cRd" secondAttribute="trailingMargin" id="fRO-jS-H3Q"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fpl-aj-imU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hvm-Ay-cRd" firstAttribute="leading" secondItem="Fpl-aj-imU" secondAttribute="leading" id="Unf-gj-Rz5"/>
-                            <constraint firstItem="hvm-Ay-cRd" firstAttribute="top" secondItem="ckh-OX-E3L" secondAttribute="top" id="cc4-uC-kVW"/>
-                            <constraint firstAttribute="bottom" secondItem="hvm-Ay-cRd" secondAttribute="bottom" id="hLJ-6U-0FD"/>
-                            <constraint firstItem="hvm-Ay-cRd" firstAttribute="trailing" secondItem="Fpl-aj-imU" secondAttribute="trailing" id="qh8-w7-aZ3"/>
+                            <constraint firstItem="hvm-Ay-cRd" firstAttribute="leading" secondItem="ckh-OX-E3L" secondAttribute="leading" id="0Ys-hK-njw"/>
+                            <constraint firstItem="hvm-Ay-cRd" firstAttribute="top" secondItem="ckh-OX-E3L" secondAttribute="top" id="3eS-6V-hDh"/>
+                            <constraint firstAttribute="bottom" secondItem="hvm-Ay-cRd" secondAttribute="bottom" id="bMD-sb-kCC"/>
+                            <constraint firstAttribute="trailing" secondItem="hvm-Ay-cRd" secondAttribute="trailing" id="hx5-lo-dbN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8X5-s9-Ctn">
