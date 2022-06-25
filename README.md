@@ -58,8 +58,7 @@ GIF created with [Kap](https://getkap.co/).
 
 Here's a walkthrough of hyperlink feature:
 
-https://i.imgur.com/OG2raT0.gif
-
+https://i.imgur.com/P3Xcuzi.gif
 ## Notes
 
 Describe any challenges encountered while building the app.
